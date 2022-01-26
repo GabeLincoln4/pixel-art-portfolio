@@ -8,6 +8,8 @@ import Home from './Home.jsx';
 
 function Admin(){
 
+    let navigate = useNavigate();
+
     const [character, setCharacter] = useState({
         name: '',
         description: ''
@@ -35,7 +37,7 @@ function Admin(){
     };
 
     function handleSubmit(){
-        const navigate = useNavigate();
+        
         const storageRef = ref(storage, `/images/${image.name}`);
         const uploadTask = uploadBytesResumable(storageRef, image);
         uploadTask.on(
@@ -53,7 +55,7 @@ function Admin(){
             }
         )
         
-        navigate('/');
+        navigate("/admin/pixelcardchoice");
     };
 
     return (<div>
