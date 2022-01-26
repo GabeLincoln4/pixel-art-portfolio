@@ -88,7 +88,7 @@ function Admin(){
    
 
     return (<div>
-        <h1>Admin Page</h1>
+        <h1 className="text-3xl">Admin Page</h1>
         <form onSubmit={handleSubmit} >
             <h1>Name: </h1>
             <input onChange={handleChange} type="text" name="name" value={character.name} />
@@ -96,7 +96,7 @@ function Admin(){
             <input onChange={handleImageChange} type="file" name="image" />
             <h1>Description: </h1>
             <textarea onChange={handleChange} name="description" type="text" rows="5" cols="25" value={character.description} />
-            <button >Submit</button>
+            <button>Submit</button>
         </form>
      
     </div>);
