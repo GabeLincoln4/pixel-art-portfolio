@@ -20,28 +20,8 @@ function Admin(){
     const [image, setImage] = useState("");
 
     useEffect(() => {
-        console.log(urlHook);
-    })
 
-    function handleChange(e){
-        const {name, value} = e.target;
-
-        setCharacter(prevCharacters => {
-            return {
-                ...prevCharacters,
-                [name]: value
-            }
-        })
-    };
-
-    const handleImageChange = (e) => {
-        
-        if(e.target.files[0]){
-            setImage(e.target.files[0])
-        }
-    };
-
-    function handleClick(){
+        if (image == "") return;
 
         const storageRef = ref(storage, `/images/${image.name}`);
         const uploadTask = uploadBytesResumable(storageRef, image);
@@ -59,8 +39,38 @@ function Admin(){
             }
         );
 
-       
+        setImage("");
+    })
+
+    function handleChange(e){
+        const {name, value} = e.target;
+
+        setCharacter(prevCharacters => {
+            return {
+                ...prevCharacters,
+                [name]: value
+            }
+        })
+
     };
+
+    const handleImageChange = (e) => {
+        
+        if(e.target.files[0]){
+            setImage(e.target.files[0])
+        }
+
+        
+    };
+
+    // function handleClick(){
+
+        
+
+        
+    // };
+
+   
 
     function handleSubmit(){
 
@@ -69,7 +79,6 @@ function Admin(){
             image: urlHook,
             description: character.description
         };
-
 
         axios.post("http://localhost:5000/createpixelartcard", newPixelCard);
 
@@ -87,7 +96,7 @@ function Admin(){
             <input onChange={handleImageChange} type="file" name="image" />
             <h1>Description: </h1>
             <textarea onChange={handleChange} name="description" type="text" rows="5" cols="25" value={character.description} />
-            <button onClick={handleClick} type="submit">Submit</button>
+            <button >Submit</button>
         </form>
      
     </div>);
