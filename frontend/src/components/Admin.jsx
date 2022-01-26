@@ -37,7 +37,7 @@ function Admin(){
     };
 
     function handleSubmit(){
-        
+
         const storageRef = ref(storage, `/images/${image.name}`);
         const uploadTask = uploadBytesResumable(storageRef, image);
         uploadTask.on(
@@ -53,7 +53,7 @@ function Admin(){
 
                     });
             }
-        )
+        );
         
         navigate("/admin/pixelcardchoice");
     };
