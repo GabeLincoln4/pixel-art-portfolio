@@ -29,7 +29,7 @@ function PixelArtGallery(){
 
     return (<div>
         <h1>Pixel Art Gallery</h1>
-        <div>
+        <div className="bg-blue-400 gap-5 grid grid-cols-1 justify-items-center">
             {pixelCards.map(creatPixelCard)}
         </div>
     </div>);
