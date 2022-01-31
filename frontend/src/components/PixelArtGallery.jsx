@@ -1,16 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PixelArtCard from './PixelArtCard.jsx';
 
-function creatPixelCard(props){
-    return <PixelArtCard 
-        key = {props.name}
-        name = {props.name}
-        image = {props.image}
-        description = {props.description}
-    />
-}
-
-
 function PixelArtGallery(){
 
     const [pixelCards, setPixelCards] = useState([{
@@ -28,8 +18,17 @@ function PixelArtGallery(){
     });
 
     return (<div>
-        <div className="bg-blue-400 gap-5 grid grid-cols-1 justify-items-center p-5">
-            {pixelCards.map(creatPixelCard)}
+        <div className="bg-blue-400 gap-5 grid grid-cols-1 p-5">
+            {pixelCards.map((card, index) => { 
+
+                return <PixelArtCard 
+                    key = {card.name}
+                    index = {index}
+                    name = {card.name}
+                    image = {card.image}
+                    description = {card.description}
+                />
+            })}
         </div>
     </div>);
 }
