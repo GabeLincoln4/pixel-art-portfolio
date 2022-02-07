@@ -1,4 +1,5 @@
 import React from 'react';
+import stylesheet from '../stylesheet';
 
 function PixelArtCard(props){
 
@@ -7,11 +8,11 @@ function PixelArtCard(props){
     let newIndex = (props.index) + 1;
 
     if(newIndex == 0){
-        style = "bg-white grid justify-items-center justify-self-start p-3 rounded-xl w-72";
+        style = stylesheet.start;
     } else if (newIndex % 2 == 0){
-        style = "bg-white grid justify-items-center justify-self-end p-3 rounded-xl w-72";
+        style = stylesheet.end;
     } else {
-        style = "bg-white grid justify-items-center justify-self-start p-3 rounded-xl w-72";
+        style = stylesheet.start;
     }
 
     return (<div className={style} > 
