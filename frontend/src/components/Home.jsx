@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PixelArtGallery from './PixelArtGallery.jsx';
 import Navbar from './Navbar.jsx';
 
+
 function Home(){
+
+    
+
     return(
         <div>
             <Navbar />
             <PixelArtGallery />
+
         </div>
     );
 }
