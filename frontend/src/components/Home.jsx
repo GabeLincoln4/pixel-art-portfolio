@@ -3,9 +3,7 @@ import PixelArtGallery from './PixelArtGallery.jsx';
 import Navbar from './Navbar.jsx';
 
 
-function Home(){
-
-    
+function Home(props){
 
     return(
         <div>
