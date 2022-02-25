@@ -4,17 +4,19 @@ import Test from './Test';
 import Exit from '../svg/Exit.jsx';
 import PixelArtGallery from './PixelArtGallery.jsx';
 import Dimmer from './Dimmer.jsx';
+import {useLinkedState} from "use-linked-state";
+import {useStateGateway} from "use-linked-state";
 
-function Navbar(props){
+function Navbar(stateGateway){
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useLinkedState(stateGateway);
     
 
     function handleClick(){
         setIsOpen(!isOpen);
     }
 
-    
+    const sideMenuState = useStateGateway(isOpen);
 
     return(
         <div className="grid grid-cols-2 p-2 z-0">
@@ -23,7 +25,7 @@ function Navbar(props){
             <button className="z-30" onClick={handleClick}>
                 {isOpen ? <Exit /> : <Hamburger /> }
             </button>
-            {isOpen && <Dimmer /> }
+            {isOpen && <Test stateGateway={sideMenuState} /> }
             
             
             
