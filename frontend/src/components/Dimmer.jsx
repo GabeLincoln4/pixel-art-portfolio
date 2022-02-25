@@ -1,5 +1,5 @@
 import React from 'react';
-import Test from './Test.jsx';
+import Test from './Sidebar.jsx';
 
 function Dimmer(){
     return (

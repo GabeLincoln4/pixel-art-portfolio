@@ -1,19 +1,13 @@
 import React, {useState} from 'react';
 import PixelArtGallery from './PixelArtGallery.jsx';
 import Navbar from './Navbar.jsx';
-import Test from './Test.jsx';
-import {useStateGateway} from 'use-linked-state';
+import Test from './Sidebar.jsx';
 
-
-
-
-function Home(props){
-
-    const sideMenuState = useStateGateway(false);
+function Home(){
 
     return(
         <div>
-            <Navbar stateGateway={sideMenuState} />
+            <Navbar  />
             <PixelArtGallery />
             {/* <Test /> */}
 
