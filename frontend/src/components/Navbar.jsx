@@ -8,8 +8,8 @@ import Dimmer from './Dimmer.jsx';
 function Navbar(){
 
     const [isOpen, setIsOpen] = useState(false);
-    const animatedEntrance = "animate__animated  animate__slideInRight absolute bg-blue-700 h-screen top-0 right-0 rounded-xl shadow-2xl w-1/2 z-20";
-    const animatedExit = "animate__animated  animate__fadeOut absolute bg-blue-700 h-screen top-0 right-0 rounded-xl shadow-2xl w-1/2 z-20";
+    const animatedEntrance = "animate__animated  animate__slideInRight absolute bg-blue-700 h-screen top-0 right-0 rounded-xl shadow-2xl w-80 z-20";
+    const animatedExit = "animate__animated  animate__fadeOut absolute bg-blue-700 h-screen top-0 right-0 rounded-xl shadow-2xl w-80 z-20";
     const prevBar = useRef(false);
     const renderCount = useRef(1);
 

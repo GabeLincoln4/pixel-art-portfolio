@@ -6,13 +6,16 @@ import 'animate.css';
 
 function Sidebar(props){
 
+    const listStyle = "m-4";
+
     return (
         
         <div className={props.style}>
-            <button>
-                <h1>Navbar</h1>
-            </button>
-            
+            <ul className="grid grid-cols-1 h-full justify-items-center place-content-center text-5xl text-white">
+                <li className={listStyle}>Gallery</li>
+                <li className={listStyle}>About</li>
+                <li className={listStyle}>Contact</li>
+            </ul>
         </div>
         
     );
