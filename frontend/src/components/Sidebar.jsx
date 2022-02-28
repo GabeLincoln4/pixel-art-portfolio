@@ -6,15 +6,15 @@ import 'animate.css';
 
 function Sidebar(props){
 
-    const listStyle = "m-4";
+    const listStyle = "m-4 hover:text-black";
 
     return (
         
         <div className={props.style}>
             <ul className="grid grid-cols-1 h-full justify-items-center place-content-center text-5xl text-white">
-                <li className={listStyle}>Gallery</li>
-                <li className={listStyle}>About</li>
-                <li className={listStyle}>Contact</li>
+                <a className={listStyle} href="https://www.google.com/">Gallery</a>
+                <a className={listStyle}>About</a>
+                <a className={listStyle}>Contact</a>
             </ul>
         </div>
         
