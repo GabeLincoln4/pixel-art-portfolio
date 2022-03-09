@@ -15,7 +15,7 @@ function PixelArtCard(props){
         style = stylesheet.start;
     }
 
-    return (<div className={style} > 
+    return (<div className={style} onMouseEnter={() => console.log("cursor entered")} onMouseLeave={() => console.log("cursor exited")} > 
         <h1 className="text-4xl">{props.name}</h1>
         <img className="mt-5 mb-2 h-64" src={props.image} />
         <p className="mb-3 text-xl">{props.description}</p>
