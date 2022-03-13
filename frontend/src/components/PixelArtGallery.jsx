@@ -27,7 +27,7 @@ function PixelArtGallery(){
 
    const ref = useRef(null);
     
-    const bright = "bg-blue-400 gap-5 grid grid-cols-1 py-5 px-8";
+    const bright = "bg-blue-400 gap-5 grid grid-cols-1 py-5 px-8 z-20";
     const dimmer = "bg-blue-400 brightness-50 gap-5 grid grid-cols-1 p-5"
 
     useEffect(() => {
